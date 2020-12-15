@@ -1,11 +1,15 @@
-import './App.css';
+import React from 'react'
+import Header from 'components/Header/Header'
+import Footer from 'components/Footer/Footer'
+import PageContent from 'domain/Destinations/PageContent/PageContent'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <>
+      <Header />
+      <PageContent />
+      <Footer />
 
-    </div>
-  );
+    </>
+  )
 }
-
-export default App;
