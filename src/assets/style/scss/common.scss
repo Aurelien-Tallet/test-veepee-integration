@@ -12,11 +12,33 @@
 	flex-direction: column;
 }
 //vars
-:root {
-	//colors
-	--white-primary: #f1f1f1;
-	--black-primary: black;
-	--green-primary: #459779;
-	// width
-	--nav-width: 155px;
+
+$primary-red : #e23022;
+$primary-grey-light: #efefef;
+$primary-grey: #333333;
+$primary-yellow: #bd9c6a;
+$primary-blue: #041a41;
+//Fonts
+.seo{
+	&-light{font-family: "SevenOneEight-Light";}
+	&-black{font-family: "SevenOneEight-Black";}
+	&-book{font-family: "SevenOneEight-Book";}
+	&-extrabold{font-family: "SevenOneEight-ExtraBold";}
+	&-medium{font-family: "SevenOneEight-Medium";}
 }
+.emirates{
+	font-family: "Emirates Bold";
+}
+//color
+	//fonts
+.red{color:$primary-red;}
+.grey-light{color:$primary-grey-light;}
+.grey{color:$primary-grey;}
+.yellow{color:$primary-yellow;}
+.blue{color:$primary-blue;}
+	//background
+.bg-red{background-color:$primary-red;}
+.bg-grey-light{background-color:$primary-grey-light;}
+.bg-grey{background-color:$primary-grey;}
+.bg-yellow{background-color:$primary-yellow;}
+.bg-blue{background-color:$primary-blue;}

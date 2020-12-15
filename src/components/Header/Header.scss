@@ -1,0 +1,13 @@
+.header {
+    margin: 10px 10% 0 10%;
+    text-align: center;
+   
+    .title {
+        @extend .emirates, .red;
+        text-transform: uppercase;
+    }
+    .promotion {
+        @extend .seo-book, .grey;
+        text-transform: uppercase;
+    }
+}

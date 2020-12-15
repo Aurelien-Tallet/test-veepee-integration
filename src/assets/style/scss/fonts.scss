@@ -1,59 +1,63 @@
 @font-face {
-    font-family: '718';
-    src: url('../../fonts/SevenOneEight-Light.eot');
-    src: url('../../fonts/SevenOneEight-Light.eot?#iefix') format('embedded-opentype'),
-        url('../../fonts/SevenOneEight-Light.woff2') format('woff2'),
-        url('../../fonts/SevenOneEight-Light.woff') format('woff'),
-        url('../../fonts/SevenOneEight-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: '718';
-    src: url('../../fonts/SevenOneEight-Black.eot');
-    src: url('../../fonts/SevenOneEight-Black.eot?#iefix') format('embedded-opentype'),
-        url('../../fonts/SevenOneEight-Black.woff2') format('woff2'),
-        url('../../fonts/SevenOneEight-Black.woff') format('woff'),
-        url('../../fonts/SevenOneEight-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: '718 Book';
-    src: url('../../fonts/SevenOneEight-Book.eot');
-    src: url('../../fonts/SevenOneEight-Book.eot?#iefix') format('embedded-opentype'),
-        url('../../fonts/SevenOneEight-Book.woff2') format('woff2'),
-        url('../../fonts/SevenOneEight-Book.woff') format('woff'),
-        url('../../fonts/SevenOneEight-Book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: '718';
-    src: url('../../fonts/SevenOneEight-ExtraBold.eot');
-    src: url('../../fonts/SevenOneEight-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('../../fonts/SevenOneEight-ExtraBold.woff2') format('woff2'),
-        url('../../fonts/SevenOneEight-ExtraBold.woff') format('woff'),
-        url('../../fonts/SevenOneEight-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: '718';
-    src: url('../../fonts/SevenOneEight-Medium.eot');
-    src: url('../../fonts/SevenOneEight-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../../fonts/SevenOneEight-Medium.woff2') format('woff2'),
-        url('../../fonts/SevenOneEight-Medium.woff') format('woff'),
-        url('../../fonts/SevenOneEight-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: "SevenOneEight-Light";
+  src: url("./assets/fonts/SevenOneEight-Light.eot");
+  src: url("./assets/fonts/SevenOneEight-Light.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/SevenOneEight-Light.woff2") format("woff2"), url("./assets/fonts/SevenOneEight-Light.woff") format("woff"),
+    url("./assets/fonts/SevenOneEight-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SevenOneEight-Black";
+  src: url("./assets/fonts/SevenOneEight-Black.eot");
+  src: url("./assets/fonts/SevenOneEight-Black.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/SevenOneEight-Black.woff2") format("woff2"), url("./assets/fonts/SevenOneEight-Black.woff") format("woff"),
+    url("./assets/fonts/SevenOneEight-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SevenOneEight-Book";
+  src: url("./assets/fonts/SevenOneEight-Book.eot");
+  src: url("./assets/fonts/SevenOneEight-Book.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/SevenOneEight-Book.woff2") format("woff2"),
+    url("./assets/fonts/SevenOneEight-Book.woff") format("woff"), url("./assets/fonts/SevenOneEight-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SevenOneEight-ExtraBold";
+  src: url("./assets/fonts/SevenOneEight-ExtraBold.eot");
+  src: url("./assets/fonts/SevenOneEight-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/SevenOneEight-ExtraBold.woff2") format("woff2"), url("./assets/fonts/SevenOneEight-ExtraBold.woff") format("woff"),
+    url("./assets/fonts/SevenOneEight-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SevenOneEight-Medium";
+  src: url("./assets/fonts/SevenOneEight-Medium.eot");
+  src: url("./assets/fonts/SevenOneEight-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/SevenOneEight-Medium.woff2") format("woff2"), url("./assets/fonts/SevenOneEight-Medium.woff") format("woff"),
+    url("./assets/fonts/SevenOneEight-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Emirates Bold";
+  src: url("./assets/fonts/Emirates\ Bold.eot");
+  src: url("./assets/fonts/Emirates\ Bold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/Emirates\ Bold.woff2") format("woff2"), url("./assets/fonts/Emirates\ Bold.woff") format("woff"),
+    url("./assets/fonts/Emirates\ Bold.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}

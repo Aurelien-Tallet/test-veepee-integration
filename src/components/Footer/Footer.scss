@@ -1,0 +1,10 @@
+.footer{
+    @extend .bg-grey;
+    margin:0 10%;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom:0;
+    height: 50px;
+}

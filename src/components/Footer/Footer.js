@@ -1,9 +1,10 @@
 import React from 'react'
-import './Footer.scss'
-export default function Footer() {
+// import './Footer.scss'
+export default function Footer({ promotion }) {
     return (
-        <div>
-            
-        </div>
+        <footer className="footer">
+            <p></p>
+            <p>{promotion}</p>
+        </footer>
     )
 }

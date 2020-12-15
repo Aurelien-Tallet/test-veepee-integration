@@ -4,11 +4,13 @@ import Footer from 'components/Footer/Footer'
 import PageContent from 'domain/Destinations/PageContent/PageContent'
 
 export default function App() {
+  let promotion = 'vol + hôtel jusqu\'à -70% '
+
   return (
     <>
-      <Header />
+      <Header promotion={promotion} />
       <PageContent />
-      <Footer />
+      <Footer promotion={promotion} />
 
     </>
   )
