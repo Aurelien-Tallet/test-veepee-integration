@@ -1,10 +1,28 @@
-.footer{
-    @extend .bg-grey;
-    margin:0 10%;
+.footer {
+    @extend .bg-grey, .grey-light, .seo-light;
+    margin: 0 10%;
     text-align: center;
     position: fixed;
     left: 0;
     right: 0;
-    bottom:0;
-    height: 50px;
+    bottom: 0;
+    line-height: 20px;
+    padding:20px 0;
+    font-weight: 100;
+    text-transform: uppercase;
+        span{
+            @extend .seo-extrabold;
+            
+    
+        }
+   
+}
+.footer::after{
+    top:10%;
+    left:50%;
+    content:"";
+    @extend .bg-red;
+    width: 20%;
+    width: 5px;
+
 }

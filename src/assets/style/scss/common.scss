@@ -1,4 +1,5 @@
 %center {
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
@@ -11,34 +12,69 @@
 	display: flex;
 	flex-direction: column;
 }
+%gridTemplate {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-gap: 10px;
+}
 //vars
 
-$primary-red : #e23022;
+$primary-red: #e23022;
 $primary-grey-light: #efefef;
 $primary-grey: #333333;
 $primary-yellow: #bd9c6a;
 $primary-blue: #041a41;
 //Fonts
-.seo{
-	&-light{font-family: "SevenOneEight-Light";}
-	&-black{font-family: "SevenOneEight-Black";}
-	&-book{font-family: "SevenOneEight-Book";}
-	&-extrabold{font-family: "SevenOneEight-ExtraBold";}
-	&-medium{font-family: "SevenOneEight-Medium";}
+.seo {
+	&-light {
+		font-family: "SevenOneEight-Light";
+	}
+	&-black {
+		font-family: "SevenOneEight-Black";
+	}
+	&-book {
+		font-family: "SevenOneEight-Book";
+	}
+	&-extrabold {
+		font-family: "SevenOneEight-ExtraBold";
+	}
+	&-medium {
+		font-family: "SevenOneEight-Medium";
+	}
 }
-.emirates{
+.emirates {
 	font-family: "Emirates Bold";
 }
 //color
-	//fonts
-.red{color:$primary-red;}
-.grey-light{color:$primary-grey-light;}
-.grey{color:$primary-grey;}
-.yellow{color:$primary-yellow;}
-.blue{color:$primary-blue;}
-	//background
-.bg-red{background-color:$primary-red;}
-.bg-grey-light{background-color:$primary-grey-light;}
-.bg-grey{background-color:$primary-grey;}
-.bg-yellow{background-color:$primary-yellow;}
-.bg-blue{background-color:$primary-blue;}
+//fonts
+.red {
+	color: $primary-red;
+}
+.grey-light {
+	color: $primary-grey-light;
+}
+.grey {
+	color: $primary-grey;
+}
+.yellow {
+	color: $primary-yellow;
+}
+.blue {
+	color: $primary-blue;
+}
+//background
+.bg-red {
+	background-color: $primary-red;
+}
+.bg-grey-light {
+	background-color: $primary-grey-light;
+}
+.bg-grey {
+	background-color: $primary-grey;
+}
+.bg-yellow {
+	background-color: $primary-yellow;
+}
+.bg-blue {
+	background-color: $primary-blue;
+}

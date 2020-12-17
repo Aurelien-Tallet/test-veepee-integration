@@ -1,0 +1,132 @@
+.destination-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.5vw;
+
+  .destination {
+    @extend %flexCol;
+    &-header {
+      position: relative;
+      .dubai-logo {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        img {
+          height: 30px;
+        }
+      }
+    }
+
+    &-upto {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+
+      label {
+        @extend .seo-extrabold;
+        color: white;
+        text-transform: uppercase;
+        line-height: 1.5;
+      }
+    }
+    &-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &-arrow-right {
+      transform-origin: center;
+      width: 20px;
+      right: 10px;
+      bottom: 50%;
+      position: absolute;
+    }
+    &-arrow-left {
+      
+      bottom: 50%;
+      width: 20px;
+      left: 10px;
+      transform: rotateZ(180deg);
+      position: absolute;
+    
+    }
+    &-footer {
+      justify-content: space-between;
+      display: flex;
+      height: 100px;
+      width: 100%;
+      background: white;
+      padding: 0 0 0 10px;
+      border-radius: 0 0 10px 10px;
+
+      .left {
+        h3 {
+          @extend .emirates, .grey;
+        }
+        h3 span.dubai {
+          color: black;
+        }
+        .tags {
+          display: flex;
+        }
+        .option,
+        .premium {
+          @extend .seo-light;
+          text-transform: uppercase;
+          color: white;
+          text-align: center;
+          font-size: 14px;
+          padding: 0 3px;
+          margin-right: 10px;
+        }
+        .option {
+          background: #000;
+        }
+        .premium {
+          @extend .bg-yellow;
+        }
+        .place-label {
+          @extend .seo-light, .grey;
+        }
+      }
+      .right {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .link {
+          @extend .bg-red;
+          width: 40px;
+          height: 40px;
+          position: relative;
+          cursor: pointer;
+          &-icon {
+            @extend %center;
+            width: 20px;
+            height: 20px;
+            transition: 0.2s ease;
+          }
+          &-icon:hover {
+            left: 55%;
+            transition: 0.2s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .destination-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Bigger than Phones(laptop / desktop) */
+@media only screen and (min-width: 970px) {
+  .destination-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -3,8 +3,8 @@ import React from 'react'
 export default function Footer({ promotion }) {
     return (
         <footer className="footer">
-            <p></p>
-            <p>{promotion}</p>
+            <h4>rejoignez <span>emirates | the list</span></h4>
+            <h4>{promotion}</h4>
         </footer>
     )
 }

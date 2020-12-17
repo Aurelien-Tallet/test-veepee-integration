@@ -1,10 +1,16 @@
 import React from 'react'
-import './PageContent.scss'
 
+import Filter from '../Filter/Filter'
+import DestinationWrapper from '../DestinationWrapper/DestinationWrapper'
+import data from '../../../assets/data/destinations.json'
 export default function PageContent() {
+  
     return (
-        <div>
+        <main>
+            <Filter />
+
             
-        </div>
+            <DestinationWrapper destinations={ data.destinations } />
+        </main>
     )
 }

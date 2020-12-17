@@ -5,9 +5,11 @@
     .title {
         @extend .emirates, .red;
         text-transform: uppercase;
+        font-size: 2.5em;
     }
     .promotion {
         @extend .seo-book, .grey;
         text-transform: uppercase;
+        font-size: 2em;
     }
 }

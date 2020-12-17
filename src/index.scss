@@ -1,9 +1,14 @@
-@import './assets/style/scss/reset.scss';
-@import './assets/style/scss/fonts.scss';
-@import './assets/style/scss/common.scss';
+@import "./assets/style/scss/reset.scss";
+@import "./assets/style/scss/fonts.scss";
+@import "./assets/style/scss/common.scss";
 
 //components
 
-@import './components/App/App.scss';
-@import './components/Footer/Footer.scss';
-@import './components/Header/Header.scss';
+@import "./components/App/App.scss";
+@import "./components/Footer/Footer.scss";
+@import "./components/Header/Header.scss";
+
+//Domain
+@import "./domain/Destinations/Filter/Filter.scss";
+@import "./domain/Destinations/PageContent/PageContent.scss";
+@import "./domain/Destinations/DestinationWrapper/DestinationWrapper.scss";

@@ -1,0 +1,8 @@
+main {
+    margin:0 10%;
+    padding-bottom:80px; 
+    @extend %flexCol;
+    justify-content: space-around;
+    align-items: center;
+
+}
