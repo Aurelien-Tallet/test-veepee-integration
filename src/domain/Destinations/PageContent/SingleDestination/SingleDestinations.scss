@@ -135,9 +135,8 @@
                 text-transform: uppercase;
                 color: white;
                 text-align: center;
-                font-size: 0.8vmax;
-                line-height: 100%;
-                padding: 2px 3px;
+                font-size: 0.7vmax;
+                padding: 2px 4px;
                 margin-right: 10px;
             }
             .option {
@@ -176,9 +175,11 @@
                         transition: 0.2s ease;
                     }
                 }
-                &-icon:hover {
-                    left: 60%;
-                    transition: 0.2s ease;
+                &:hover {
+                    img {
+                        left: 60%;
+                        transition: 0.2s ease;
+                    }
                 }
             }
         }
