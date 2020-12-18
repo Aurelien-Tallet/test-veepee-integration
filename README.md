@@ -21,12 +21,11 @@ Pour ce faire, j'ai d'abord listé les fonctionnalités visibles sur la maquette
 ### Par exemple : 
 - Effet d'augmentation du pourcentage de la réduction mettant en avant l'importance de celle-ci.
 - Slider comportant 3 images, présent uniquement sur les aricles précisé dans la maquette.
-- Animation au hover, des articles, avec Zoom sur l'image, ou encore flèche du bouton animé.
+- Animation au hover de certains éléments, comme les articles (Zoom sur l'image / mouvement de la flèche), mais aussi sur le filtre Destinations.
 - Ajout personnel d'un effet d'apparition au défilement de la page (scroll reveal) sur certains éléments.
-- Effet parallax sur l'image principale du header.
 
 ## SEO, accessibilité & performances : 
-- Ajout de meta données (description, open graph etc...)
+- Ajout de meta données (description)
 - Optimisation des ressources (images, polices)
 
 
@@ -54,10 +53,9 @@ In order to do so, I first listed the functionalities visible on the mock-up and
 ### For example : 
 - Effect of increasing the percentage of the reduction highlighting the importance of the reduction.
 - Slider with 3 images, present only on the aricles specified in the mock-up.
-- Hover animations, articles, with Zoom on the image, and arrow of the animated button.
+- Animation at hover of some elements, such as items (Zoom on image / arrow movement), but also on the Destinations filter.
 - Personal addition of a scroll reveal effect on some items.
-- Parallax effect on the main header image.
 
 ## SEO, accessibility & performance : 
-- Addition of meta data (description, open graph etc...).
-- Optimization of resources (images, fonts)
+- Addition of meta data (description)
+- Resource optimization (images, fonts)

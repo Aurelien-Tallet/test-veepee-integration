@@ -23,7 +23,7 @@ function SingleDestination({ destination, image, delay }) {
             setSlider(true)
             setImageList([image.sliderImg[0], image.src, image.sliderImg[1]])
         }
-        // REVEAL ARTICLES IN CASCADE EFFECT
+        // REVEAL ARTICLES WITH CASCADE EFFECT
         const config = {
             origin: 'top',
             delay: delay * 100,
@@ -33,6 +33,7 @@ function SingleDestination({ destination, image, delay }) {
         }
         sr.reveal(articleRef.current, config)
     }, [])
+    // SLIDER FOR SOME ARTICLES
     const sliderShow = (e) => {
         e.preventDefault()
         switch (e.target.className) {
