@@ -3,10 +3,48 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1.5vw;
-
+  position: relative;
+  padding-bottom: 100px;
+  .line {
+    z-index: 1;
+    @extend .bg-red;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+  }
+  .line:after {
+    content: "";
+    @extend .bg-blue;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 3px;
+    height: 400px;
+  }
   .destination {
+    z-index: 2;
     @extend %flexCol;
     &-header {
+      .container-slider {
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        .link-image {
+          img {
+            transform: scale(1);
+            transition: 0.2s ease-in;
+          }
+          &:hover {
+            img {
+              transform: scale(1.05);
+              transition: 0.2s ease-in;
+            }
+          }
+        }
+      }
       position: relative;
       .dubai-logo {
         position: absolute;
@@ -16,6 +54,11 @@
           height: 30px;
         }
       }
+    }
+    .slideshow-container {
+      display: flex;
+      position: relative;
+      overflow: hidden;
     }
 
     &-upto {
@@ -36,40 +79,61 @@
       width: 100%;
       object-fit: cover;
     }
-    &-arrow-right {
-      transform-origin: center;
-      width: 20px;
-      right: 10px;
-      bottom: 50%;
+    &-prev,
+    &-next {
+      width: 30px;
+      bottom: 40%;
+      font-size: 30px;
+      color: white;
       position: absolute;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: center;
+      user-select: none;
+      transition: 0.1s ease-in;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.349);
+        transition: 0.1s ease-in;
+      }
     }
-    &-arrow-left {
-      
-      bottom: 50%;
-      width: 20px;
-      left: 10px;
-      transform: rotateZ(180deg);
-      position: absolute;
-    
+
+    &-prev {
+      left: 0;
+      border-radius: 0 5px 5px 0;
+    }
+    &-next {
+      right: 0;
+      border-radius: 5px 0 0 5px;
     }
     &-footer {
       justify-content: space-between;
       display: flex;
       height: 100px;
       width: 100%;
+      position: relative;
       background: white;
-      padding: 0 0 0 10px;
+      padding: 0 0 0 20px;
       border-radius: 0 0 10px 10px;
 
       .left {
-        h3 {
-          @extend .emirates, .grey;
+        @extend %flexCol;
+        justify-content: center;
+
+        .location {
+          font-size: 1vw;
+          @extend .seo-light, .grey;
+          white-space: nowrap;
         }
-        h3 span.dubai {
-          color: black;
+        h3 span {
+          @extend .emirates;
+          &.dubai {
+            color: black;
+          }
         }
         .tags {
           display: flex;
+          white-space: nowrap;
         }
         .option,
         .premium {
@@ -77,8 +141,9 @@
           text-transform: uppercase;
           color: white;
           text-align: center;
-          font-size: 14px;
-          padding: 0 3px;
+          font-size: 0.8vmax;
+          line-height: 100%;
+          padding: 2px 3px;
           margin-right: 10px;
         }
         .option {
@@ -89,10 +154,15 @@
         }
         .place-label {
           @extend .seo-light, .grey;
+          font-size: 0.8vw;
+          margin-bottom: 10px;
         }
       }
       .right {
-        padding: 30px;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -107,9 +177,13 @@
             width: 20px;
             height: 20px;
             transition: 0.2s ease;
+            &.hovered {
+              left: 60%;
+              transition: 0.2s ease;
+            }
           }
           &-icon:hover {
-            left: 55%;
+            left: 60%;
             transition: 0.2s ease;
           }
         }
@@ -121,12 +195,114 @@
 @media only screen and (min-width: 750px) {
   .destination-wrapper {
     grid-template-columns: repeat(2, 1fr);
+
+    .location {
+      font-size: 22px;
+    }
   }
 }
 
-/* Bigger than Phones(laptop / desktop) */
-@media only screen and (min-width: 970px) {
+@media only screen and (min-width: 1050px) {
   .destination-wrapper {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1420px) {
+  .destination-wrapper {
+    .destination {
+      &-footer {
+        .left {
+          .location {
+            font-size: 1.2vw;
+          }
+          .place-label {
+            font-size: 1vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .destination-wrapper {
+    .line {
+      display: none;
+    }
+    .destination {
+      &-footer {
+        .left {
+          .location {
+            font-size: 1.6vw;
+          }
+          .place-label {
+            font-size: 1.4vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .destination-wrapper {
+    .line {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .destination-wrapper {
+    grid-gap: 20px;
+    .destination {
+      &-footer {
+        .left {
+          .location {
+            font-size: 24px;
+          }
+          .place-label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .destination-wrapper {
+    grid-template-columns: repeat(1, 100%);
+    .destination {
+      &-footer {
+        height: 90px;
+        .left {
+          .location {
+            font-size: 3.5vw;
+          }
+          .place-label {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .destination-wrapper {
+    .destination {
+      &-footer {
+        .right {
+          right: 20px;
+          .link {
+            width: 35px;
+            height: 35px;
+            &-icon {
+              width: 15px;
+              width: 15px;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -13,7 +13,7 @@ function Filter() {
                     <span className="bar bar3" />
                 </div>
                 <select name="slct" id="slct" defaultValue="0">
-                    <option value="0" selected disabled>destination</option>
+                    <option value="0" selected disabled>destinations</option>
                     <option value="1">Emirates Arabes Unis</option>
                     <option value="2">Maurice</option>
                     <option value="3">Indonésie</option>

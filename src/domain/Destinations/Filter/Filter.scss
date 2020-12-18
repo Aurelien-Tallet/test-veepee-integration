@@ -1,5 +1,5 @@
 .filter-container {
-    margin: 50px 0;
+    margin: 80px 0 50px 0;
 }
 select {
     width: 100%;
@@ -33,7 +33,7 @@ select::-ms-expand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 275px;
+    width: 265px;
     height: 3em;
     line-height: 3;
     background: white;
@@ -74,7 +74,7 @@ select {
     position: absolute;
     height: 100%;
     border-left: 2px solid $primary-grey-light;
-    right: 0;
+    right: 5px;
     width: 45px;
     display: block;
     pointer-events: none;
@@ -99,7 +99,7 @@ select {
     pointer-events: none;
     position: absolute;
     height: 100%;
-    left: 0;
+    left: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -145,5 +145,18 @@ select {
         width: 25px;
         height: 2px;
         margin-top: 6px;
+    }
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .select,select{
+        background: none;
+        border:1px solid $primary-grey;
+        font-size: 14px;
+
+    }
+    .chevron-down{
+        border-left: 1px solid $primary-grey;
     }
 }

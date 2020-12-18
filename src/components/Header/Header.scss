@@ -1,7 +1,18 @@
 .header {
+    position: relative;
     margin: 10px 10% 0 10%;
     text-align: center;
-   
+    white-space: nowrap;
+    &:after {
+        @extend .bg-grey;
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -15px;
+        width: 150px;
+        height: 4px;
+    }
     .title {
         @extend .emirates, .red;
         text-transform: uppercase;
@@ -11,5 +22,69 @@
         @extend .seo-book, .grey;
         text-transform: uppercase;
         font-size: 2em;
+    }
+}
+@media (max-width: 991px) {
+    .header {
+        .title {
+            font-size: 2em;
+        }
+        .promotion {
+            font-size: 1.5em;
+        }
+    }
+}
+@media (max-width: 730px) {
+    .header {
+        &:after {
+            width: 130px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .header {
+        margin: 0;
+        .title {
+            font-size: 1.7em;
+        }
+        .promotion {
+            font-size: 1.2em;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .header {
+        .title {
+            font-size: 1.4em;
+        }
+        .promotion {
+            font-size: 1em;
+        }
+    }
+}
+
+@media (max-width: 481px) {
+    .header {
+        .title {
+            font-size: 1.2em;
+        }
+        .promotion {
+            font-size: 0.8em;
+        }
+        &:after {
+            width: 100px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        .title {
+            font-size: 1em;
+        }
+        .promotion {
+            font-size: 0.6em;
+        }
     }
 }
