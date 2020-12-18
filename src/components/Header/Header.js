@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 
 export default function Header() {
+    // REFS
     const promotionRef = useRef();
+
+    
     useEffect(() => {
         let count = 0
         let max = 70
@@ -14,6 +17,8 @@ export default function Header() {
         }, speed)
         return () => clearInterval(interval)
     }, []);
+
+
     return (
         <header className='header'>
             <h1 className='title'>découvrez les offres du moment</h1>

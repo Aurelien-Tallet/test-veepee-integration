@@ -4,11 +4,14 @@ import Footer from 'components/Footer/Footer'
 import PageContent from 'domain/Destinations/PageContent/PageContent'
 
 export default function App() {
+
+  // STATE
   const [promotion, setPromotion] = useState(0)
+
+  // SCROLL TO TOP AFTER REFRESH
   const refresh = () => {
     window.scrollTo(0, 0);
   }
-
 
 
   useEffect(() => {

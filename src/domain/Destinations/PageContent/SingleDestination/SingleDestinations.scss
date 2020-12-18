@@ -1,0 +1,304 @@
+.line {
+    z-index: 1;
+    @extend .bg-red;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+.line:after {
+    content: "";
+    @extend .bg-blue;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 3px;
+    min-height: 300px;
+    height: 20vw;
+}
+.destination {
+    z-index: 2;
+    @extend %flexCol;
+    &-header {
+        .container-slider {
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            .link-image {
+                img {
+                    transform: scale(1);
+                    transition: 0.2s ease-in;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.05);
+                        transition: 0.2s ease-in;
+                    }
+                }
+            }
+        }
+        position: relative;
+        .dubai-logo {
+            position: absolute;
+            left: 15px;
+            bottom: 15px;
+            img {
+                height: 30px;
+            }
+        }
+    }
+    .slideshow-container {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &-upto {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+
+        label {
+            @extend .seo-extrabold;
+            color: white;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
+    }
+    &-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &-prev,
+    &-next {
+        width: 30px;
+        bottom: 40%;
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        cursor: pointer;
+        text-align: center;
+        vertical-align: center;
+        user-select: none;
+        transition: 0.1s ease-in;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.349);
+            transition: 0.1s ease-in;
+        }
+    }
+
+    &-prev {
+        left: 0;
+        border-radius: 0 5px 5px 0;
+    }
+    &-next {
+        right: 0;
+        border-radius: 5px 0 0 5px;
+    }
+    &-footer {
+        justify-content: space-between;
+        display: flex;
+        height: 100px;
+        width: 100%;
+        position: relative;
+        background: white;
+        padding: 0 0 0 20px;
+        border-radius: 0 0 10px 10px;
+
+        .left {
+            @extend %flexCol;
+            justify-content: center;
+
+            .location {
+                font-size: 1vw;
+                @extend .seo-light, .grey;
+                white-space: nowrap;
+            }
+            h3 span {
+                @extend .emirates;
+                &.dubai {
+                    color: black;
+                }
+            }
+            .tags {
+                display: flex;
+                white-space: nowrap;
+            }
+            .option,
+            .premium {
+                @extend .seo-light;
+                text-transform: uppercase;
+                color: white;
+                text-align: center;
+                font-size: 0.8vmax;
+                line-height: 100%;
+                padding: 2px 3px;
+                margin-right: 10px;
+            }
+            .option {
+                background: #000;
+            }
+            .premium {
+                @extend .bg-yellow;
+            }
+            .place-label {
+                @extend .seo-light, .grey;
+                font-size: 0.8vw;
+                margin-bottom: 10px;
+            }
+        }
+        .right {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .link {
+                @extend .bg-red;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                cursor: pointer;
+                &-icon {
+                    @extend %center;
+                    width: 20px;
+                    height: 20px;
+                    transition: 0.2s ease;
+                    &.hovered {
+                        left: 60%;
+                        transition: 0.2s ease;
+                    }
+                }
+                &-icon:hover {
+                    left: 60%;
+                    transition: 0.2s ease;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1420px) {
+    .destination-wrapper {
+        .destination {
+            &-footer {
+                .left {
+                    .location {
+                        font-size: 1.2vw;
+                    }
+                    .place-label {
+                        font-size: 1vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .destination-wrapper {
+        .line {
+            display: none;
+        }
+        .destination {
+            &-footer {
+                .left {
+                    .location {
+                        font-size: 1.6vw;
+                    }
+                    .place-label {
+                        font-size: 1.4vw;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1050px) {
+    .destination-wrapper {
+        .line {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .destination-wrapper {
+        .destination {
+            &-footer {
+                .left {
+                    .location {
+                        font-size: 24px;
+                    }
+                    .place-label {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 750px) {
+    .destination-wrapper {
+        .destination {
+            .dubai-logo {
+                left: 15px;
+                bottom: 15px;
+                img {
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .destination-wrapper {
+        .destination {
+            &-footer {
+                height: 90px;
+                .left {
+                    .location {
+                        font-size: 3.5vw;
+                    }
+                    .place-label {
+                        font-size: 3vw;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1400px) {
+    .destination-wrapper {
+        .destination {
+            .dubai-logo {
+                left: 10px;
+                bottom: 10px;
+                img {
+                    height: 25px;
+                }
+            }
+            &-footer {
+                .right {
+                    right: 20px;
+                    .link {
+                        width: 35px;
+                        height: 35px;
+                        &-icon {
+                            width: 15px;
+                            width: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

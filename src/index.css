@@ -104,20 +104,20 @@ select {
   font-style: normal;
   font-display: swap;
 }
-.destination-wrapper .destination-footer .right .link-icon, .chevron-down img {
+.destination-footer .right .link-icon, .chevron-down img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
-.destination-wrapper .destination-footer .left, .destination-wrapper .destination, main {
+.destination-footer .left, .destination, main {
   display: flex;
   flex-direction: column;
 }
 
-.seo-light, .destination-wrapper .destination-footer .left .place-label, .destination-wrapper .destination-footer .left .option,
-.destination-wrapper .destination-footer .left .premium, .destination-wrapper .destination-footer .left .location, .footer {
+.seo-light, .destination-footer .left .place-label, .destination-footer .left .option,
+.destination-footer .left .premium, .destination-footer .left .location, .footer {
   font-family: "SevenOneEight-Light";
 }
 .seo-black {
@@ -126,14 +126,14 @@ select {
 .seo-book, select, .header .promotion {
   font-family: "SevenOneEight-Book";
 }
-.seo-extrabold, .destination-wrapper .destination-upto label, .footer span {
+.seo-extrabold, .destination-upto label, .footer span {
   font-family: "SevenOneEight-ExtraBold";
 }
 .seo-medium {
   font-family: "SevenOneEight-Medium";
 }
 
-.emirates, .destination-wrapper .destination-footer .left h3 span, .header .title {
+.emirates, .destination-footer .left h3 span, .header .title {
   font-family: "Emirates Bold";
 }
 
@@ -145,7 +145,7 @@ select {
   color: #efefef;
 }
 
-.grey, .destination-wrapper .destination-footer .left .place-label, .destination-wrapper .destination-footer .left .location, .header .promotion {
+.grey, .destination-footer .left .place-label, .destination-footer .left .location, .header .promotion {
   color: #333333;
 }
 
@@ -157,7 +157,7 @@ select {
   color: #041a41;
 }
 
-.bg-red, .destination-wrapper .destination-footer .right .link, .destination-wrapper .line, .filter-logo .bar, .filter-logo .bar:after, .footer:after {
+.bg-red, .destination-footer .right .link, .line, .filter-logo .bar, .filter-logo .bar:after, .footer:after {
   background-color: #e23022;
 }
 
@@ -169,11 +169,11 @@ select {
   background-color: #333333;
 }
 
-.bg-yellow, .destination-wrapper .destination-footer .left .premium {
+.bg-yellow, .destination-footer .left .premium {
   background-color: #bd9c6a;
 }
 
-.bg-blue, .destination-wrapper .line:after {
+.bg-blue, .line:after {
   background-color: #041a41;
 }
 
@@ -293,7 +293,7 @@ select {
 }
 @media (max-width: 375px) {
   .header .title {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .header .promotion {
     font-size: 0.6em;
@@ -468,7 +468,28 @@ main {
   position: relative;
   padding-bottom: 100px;
 }
-.destination-wrapper .line {
+
+@media only screen and (min-width: 750px) {
+  .destination-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .destination-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 730px) {
+  .destination-wrapper {
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .destination-wrapper {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+.line {
   z-index: 1;
   bottom: 50px;
   left: 50%;
@@ -477,7 +498,8 @@ main {
   width: 20px;
   height: 20px;
 }
-.destination-wrapper .line:after {
+
+.line:after {
   content: "";
   bottom: 100%;
   left: 50%;
@@ -486,54 +508,55 @@ main {
   width: 3px;
   height: 400px;
 }
-.destination-wrapper .destination {
+
+.destination {
   z-index: 2;
 }
-.destination-wrapper .destination-header {
+.destination-header {
   position: relative;
 }
-.destination-wrapper .destination-header .container-slider {
+.destination-header .container-slider {
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
-.destination-wrapper .destination-header .container-slider .link-image img {
+.destination-header .container-slider .link-image img {
   transform: scale(1);
   transition: 0.2s ease-in;
 }
-.destination-wrapper .destination-header .container-slider .link-image:hover img {
+.destination-header .container-slider .link-image:hover img {
   transform: scale(1.05);
   transition: 0.2s ease-in;
 }
-.destination-wrapper .destination-header .dubai-logo {
+.destination-header .dubai-logo {
   position: absolute;
   left: 15px;
   bottom: 15px;
 }
-.destination-wrapper .destination-header .dubai-logo img {
+.destination-header .dubai-logo img {
   height: 30px;
 }
-.destination-wrapper .destination .slideshow-container {
+.destination .slideshow-container {
   display: flex;
   position: relative;
   overflow: hidden;
 }
-.destination-wrapper .destination-upto {
+.destination-upto {
   position: absolute;
   bottom: 10px;
   right: 10px;
   display: flex;
 }
-.destination-wrapper .destination-upto label {
+.destination-upto label {
   color: white;
   text-transform: uppercase;
   line-height: 1.5;
 }
-.destination-wrapper .destination-image {
+.destination-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.destination-wrapper .destination-prev, .destination-wrapper .destination-next {
+.destination-prev, .destination-next {
   width: 30px;
   bottom: 40%;
   font-size: 30px;
@@ -545,19 +568,19 @@ main {
   user-select: none;
   transition: 0.1s ease-in;
 }
-.destination-wrapper .destination-prev:hover, .destination-wrapper .destination-next:hover {
+.destination-prev:hover, .destination-next:hover {
   background: rgba(0, 0, 0, 0.349);
   transition: 0.1s ease-in;
 }
-.destination-wrapper .destination-prev {
+.destination-prev {
   left: 0;
   border-radius: 0 5px 5px 0;
 }
-.destination-wrapper .destination-next {
+.destination-next {
   right: 0;
   border-radius: 5px 0 0 5px;
 }
-.destination-wrapper .destination-footer {
+.destination-footer {
   justify-content: space-between;
   display: flex;
   height: 100px;
@@ -567,22 +590,22 @@ main {
   padding: 0 0 0 20px;
   border-radius: 0 0 10px 10px;
 }
-.destination-wrapper .destination-footer .left {
+.destination-footer .left {
   justify-content: center;
 }
-.destination-wrapper .destination-footer .left .location {
+.destination-footer .left .location {
   font-size: 1vw;
   white-space: nowrap;
 }
-.destination-wrapper .destination-footer .left h3 span.dubai {
+.destination-footer .left h3 span.dubai {
   color: black;
 }
-.destination-wrapper .destination-footer .left .tags {
+.destination-footer .left .tags {
   display: flex;
   white-space: nowrap;
 }
-.destination-wrapper .destination-footer .left .option,
-.destination-wrapper .destination-footer .left .premium {
+.destination-footer .left .option,
+.destination-footer .left .premium {
   text-transform: uppercase;
   color: white;
   text-align: center;
@@ -591,14 +614,14 @@ main {
   padding: 2px 3px;
   margin-right: 10px;
 }
-.destination-wrapper .destination-footer .left .option {
+.destination-footer .left .option {
   background: #000;
 }
-.destination-wrapper .destination-footer .left .place-label {
+.destination-footer .left .place-label {
   font-size: 0.8vw;
   margin-bottom: 10px;
 }
-.destination-wrapper .destination-footer .right {
+.destination-footer .right {
   position: absolute;
   right: 30px;
   top: 50%;
@@ -607,39 +630,26 @@ main {
   justify-content: center;
   align-items: center;
 }
-.destination-wrapper .destination-footer .right .link {
+.destination-footer .right .link {
   width: 40px;
   height: 40px;
   position: relative;
   cursor: pointer;
 }
-.destination-wrapper .destination-footer .right .link-icon {
+.destination-footer .right .link-icon {
   width: 20px;
   height: 20px;
   transition: 0.2s ease;
 }
-.destination-wrapper .destination-footer .right .link-icon.hovered {
+.destination-footer .right .link-icon.hovered {
   left: 60%;
   transition: 0.2s ease;
 }
-.destination-wrapper .destination-footer .right .link-icon:hover {
+.destination-footer .right .link-icon:hover {
   left: 60%;
   transition: 0.2s ease;
 }
 
-@media only screen and (min-width: 750px) {
-  .destination-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .destination-wrapper .location {
-    font-size: 22px;
-  }
-}
-@media only screen and (min-width: 1050px) {
-  .destination-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 @media (max-width: 1420px) {
   .destination-wrapper .destination-footer .left .location {
     font-size: 1.2vw;
@@ -665,9 +675,6 @@ main {
   }
 }
 @media (max-width: 730px) {
-  .destination-wrapper {
-    grid-gap: 20px;
-  }
   .destination-wrapper .destination-footer .left .location {
     font-size: 24px;
   }
@@ -675,10 +682,16 @@ main {
     font-size: 14px;
   }
 }
-@media (max-width: 575px) {
-  .destination-wrapper {
-    grid-template-columns: repeat(1, 100%);
+@media (max-width: 750px) {
+  .destination-wrapper .destination .dubai-logo {
+    left: 15px;
+    bottom: 15px;
   }
+  .destination-wrapper .destination .dubai-logo img {
+    height: 30px;
+  }
+}
+@media (max-width: 575px) {
   .destination-wrapper .destination-footer {
     height: 90px;
   }
@@ -690,6 +703,13 @@ main {
   }
 }
 @media (max-width: 1400px) {
+  .destination-wrapper .destination .dubai-logo {
+    left: 10px;
+    bottom: 10px;
+  }
+  .destination-wrapper .destination .dubai-logo img {
+    height: 25px;
+  }
   .destination-wrapper .destination-footer .right {
     right: 20px;
   }

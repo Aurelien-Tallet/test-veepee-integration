@@ -1,9 +1,25 @@
 import React from 'react'
 import chevronDown from '../../../assets/icons/chevrondown.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Filter() {
+    // STATES
     const [reverse, setReverse] = useState(false)
+    const [isDesktop, setisDesktop] = useState(true)
+
+    // DISABLE ARROW ANIMATION'S SELECT IN MOBILE DEVICE
+    const detectMob = () => {
+        if ((window.innerWidth <= 800) && (window.innerHeight <= 600)) {
+            setisDesktop(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', detectMob)
+        return () => window.removeEventListener('resize', detectMob)
+    }, [])
+
+
     return (
         <section className="filter-container" onClick={() => { setReverse(!reverse) }}>
             <div className="select">
@@ -23,7 +39,7 @@ function Filter() {
                     <option value="7">Sri Lanka</option>
                     <option value="8">Vietnam</option>
                 </select>
-                <div className={`chevron-down ${reverse ? "reverse" : ""}`}><img src={chevronDown} alt="chevron-down" /></div>
+                <div className={`chevron-down ${(isDesktop && reverse) ? "reverse" : ""}`}><img src={chevronDown} alt="chevron-down" /></div>
             </div>
         </section>
     )

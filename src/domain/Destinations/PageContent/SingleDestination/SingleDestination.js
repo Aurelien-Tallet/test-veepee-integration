@@ -1,22 +1,37 @@
 import React, { useEffect, useState, useRef } from 'react'
 import icon from '../../../../assets/icons/right-chevron.svg'
 import logoDubai from '../../../../assets/icons/Dubai.png'
+import sr from '../../../../utils/scrollreveal'
 
-function SingleDestination({ destination, image }) {
+function SingleDestination({ destination, image, delay }) {
+    // PROPS
     const { country, place, label, rating, upto, redirect_label, tags, link } = destination
+
+    // STATES
     const [ratingState, setRatingState] = useState([])
     const [slider, setSlider] = useState(false)
     const [imageList, setImageList] = useState([])
     const [index, setIndex] = useState(1)
 
+    // REF
+    const articleRef = useRef()
     const iconRef = useRef()
+
     useEffect(() => {
         setRatingState(new Array(parseInt(rating.split('')[0])).fill('★'))
         if (image.sliderImg != undefined) {
             setSlider(true)
             setImageList([image.sliderImg[0], image.src, image.sliderImg[1]])
         }
-
+        // REVEAL ARTICLES IN CASCADE EFFECT
+        const config = {
+            origin: 'top',
+            delay: delay * 100,
+            distance: '30px',
+            easing: 'ease',
+            reset: false
+        }
+        sr.reveal(articleRef.current, config)
     }, [])
     const sliderShow = (e) => {
         e.preventDefault()
@@ -33,7 +48,7 @@ function SingleDestination({ destination, image }) {
     }
     return (
 
-        <article className="destination">
+        <article className="destination" ref={articleRef}>
 
 
             <figure className="destination-header">
@@ -59,18 +74,14 @@ function SingleDestination({ destination, image }) {
                         })}
                     </div>
                 </div>
-
-
                 <div className="right">
                     <a className="link" title={redirect_label} href={link} target='_blank' rel="noreferrer"  >
                         <img className="link-icon" ref={iconRef} src={icon} />
                     </a>
                 </div>
-
             </footer>
 
         </article>
-
     )
 }
 
