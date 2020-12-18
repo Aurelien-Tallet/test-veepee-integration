@@ -6,6 +6,8 @@ export default function Header() {
 
     
     useEffect(() => {
+
+        // Promotion increment animation
         let count = 0
         let max = 70
         let speed = 15

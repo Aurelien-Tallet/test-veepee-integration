@@ -7,7 +7,7 @@ function Filter() {
     const [reverse, setReverse] = useState(false)
     const [isDesktop, setisDesktop] = useState(true)
 
-    // DISABLE ARROW ANIMATION'S SELECT IN MOBILE DEVICE
+    // Disable arrow's animation select on mobile devices
     const detectMob = () => {
         if ((window.innerWidth <= 800) && (window.innerHeight <= 600)) {
             setisDesktop(false);
@@ -15,13 +15,19 @@ function Filter() {
     }
 
     useEffect(() => {
+        // REPONSIVE DETECTION
         window.addEventListener('resize', detectMob)
         return () => window.removeEventListener('resize', detectMob)
     }, [])
 
 
     return (
-        <section className="filter-container" onClick={() => { setReverse(!reverse) }}>
+
+        <section className="filter-container" onClick={
+            () => {
+                // Toggle reverse bool on click 
+                setReverse(!reverse)
+            }}>
             <div className="select">
                 <div className="filter-logo">
                     <span className="bar bar1" />
@@ -39,7 +45,11 @@ function Filter() {
                     <option value="7">Sri Lanka</option>
                     <option value="8">Vietnam</option>
                 </select>
-                <div className={`chevron-down ${(isDesktop && reverse) ? "reverse" : ""}`}><img src={chevronDown} alt="chevron-down" /></div>
+                
+                {/* Reverse class added when select is open (reverse bool) */}
+                <div className={`chevron-down ${(isDesktop && reverse) ? "reverse" : ""}`}>
+                    <img src={chevronDown} alt="chevron-down" />
+                </div>
             </div>
         </section>
     )

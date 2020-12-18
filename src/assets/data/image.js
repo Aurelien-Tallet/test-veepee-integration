@@ -1,3 +1,4 @@
+// IMAGES URL ARRAY
 
 const images = [
 

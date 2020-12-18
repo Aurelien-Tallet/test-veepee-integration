@@ -7,6 +7,7 @@ function DestinationWrapper({ destinations }) {
     return (
         <section className="destination-wrapper">
 
+            {/* Generate articles */}
             {destinations.map((destination, i) => {
                 return <SingleDestination key={i} delay={i} destination={destination} image={images[i]} />
             })}
